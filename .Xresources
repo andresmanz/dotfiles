@@ -1,90 +1,95 @@
-!-------------------------------------------------------------------------------
-! URxvt settings
-! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
-! More info at:
-! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
-!-------------------------------------------------------------------------------
+Xcursor*theme:              Oxygen_White
 
-URxvt.depth:                32
-URxvt.geometry:             80x24
-URxvt.fading:               0
-URxvt.background:			[85]#000000
+Xft.dpi:                    96
+Xft.antialias:              true
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintslight
+
+URxvt.fading:               15
+!Set URxvt.depth: 32  for transparent background, 0 for nothing - URxvt.background: [85]#2d2d2d  -  Not used - using transset and devilspie for URxvt transparency to work with ranger and w3m image preview
+!URxvt.depth:                32
+URxvt.geometry:             90x30
+URxvt.urgentOnBell:         true
+URxvt.visualBell:           true
 URxvt.loginShell:           true
-URxvt.saveLines:            500
-URxvt.internalBorder:       3
+URxvt.saveLines:            65535
+URxvt.internalBorder:       1
+!URxvt.borderColor:      #b72f62
 URxvt.lineSpace:            0
+urxvt*shading:              95
+urxvt*transparent:          false
+URxvt.iso14755:             false
+URxvt*letterSpace:          -1
+URxvt*borderLess:           false
 
 ! Fonts
-URxvt.allow_bold:           true
-/* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
-URxvt.font:					xft:Monospace:size=10:antialias=true
-URxvt.boldFont:				xft:Monospace:size=10:antialias=true
+URxvt.allow_bold:           false
+URxvt*font:             xft:Roboto Mono-8
 
-! Fix font space
-!URxvt.letterSpace: -1
+!Clipboard
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 
 ! Scrollbar
-URxvt.scrollBar:            off
+URxvt.scrollStyle:          plain
+URxvt.scrollBar:            false
+URxvt*scrollTtyOutput:      false
+URxvt*scrollBar_right:      true
 
 ! Perl extensions
-URxvt.perl-ext-common:		default,matcher,clipboard
-URxvt.url-launcher:			/usr/bin/firefox
-URxvt.matcher.button:		1
-URxvt.colorUL:				#4682B4
+URxvt.perl-ext-common:      default,tabbedex,matcher,clipboard
+URxvt.url-launcher: /usr/bin/firefox
+URxvt.matcher.button: 1
 
-! Copy/Paste
-URxvt.keysym.M-c:			perl:clipboard:copy
-URxvt.keysym.M-v:			perl:clipboard:paste
-URxvt.keysym.M-C-v:			perl:clipboard:paste_escaped
+! Tabs
+URxvt.tabbed.autohide:      true
+URxvt.tabbed.reopen-on-close: no
+URxvt.keysym.Control-t: perl:tabbedex:new_tab
+URxvt.keysym.Control-Tab: perl:tabbedex:next_tab
+URxvt.keysym.Control-Shift-Tab: perl:tabbedex:prev_tab
+URxvt.tabbed.no-tabbedex-keys: true
 
 ! Cursor
-URxvt.cursorBlink:          true
-URxvt.cursorColor:          #657b83
-URxvt.cursorUnderline:      false
+*.cursorBlink:          true
+*.cursorUnderline:      false
 
 ! Pointer
-URxvt.pointerBlank:         true
+*.pointerBlank:         true
 
-!!Source http://github.com/altercation/solarized
+! special
+*foreground:   #c5c8c6
+*background:   #1d1f21
+*cursorColor:  #c5c8c6
 
-*background: #002b36
-URxvt.foreground: #657b83
-!!*fading: 40
-*fadeColor: #002b36
-*cursorColor: #93a1a1
-*pointerColorBackground: #586e75
-*pointerColorForeground: #93a1a1
+! black
+*color0:       #282a2e
+*color8:       #373b41
 
-!! black dark/light
-*color0: #073642
-*color8: #002b36
+! red
+*color1:       #a54242
+*color9:       #cc6666
 
-!! red dark/light
-*color1: #dc322f
-*color9: #cb4b16
+! green
+*color2:       #8c9440
+*color10:      #b5bd68
 
-!! green dark/light
-*color2: #859900
-*color10: #586e75
+! yellow
+*color3:       #de935f
+*color11:      #f0c674
 
-!! yellow dark/light
-*color3: #b58900
-*color11: #657b83
+! blue
+*color4:       #5f819d
+*color12:      #81a2be
 
-!! blue dark/light
-*color4: #268bd2
-*color12: #839496
+!magenta
+*color5:       #85678f
+*color13:      #b294bb
 
-!! magenta dark/light
-*color5: #d33682
-*color13: #6c71c4
+! cyan
+*color6:       #5e8d87
+*color14:      #8abeb7
 
-!! cyan dark/light
-*color6: #2aa198
-*color14: #93a1a1
-
-!! white dark/light
-*color7: #eee8d5
-*color15: #fdf6e3
-
-Xcursor*theme: Oxygen_White
+! white
+*color7:       #707880
+*color15:      #c5c8c6
