@@ -1,0 +1,5 @@
+alias ls="ls -h --color=auto"
+alias l='ls -l'
+alias la='ls -la'
+alias svim="sudo vim"
+

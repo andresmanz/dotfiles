@@ -1,0 +1,11 @@
+[manz]
+	andres = Andres Manz
+[user]
+	email = manz.andres@gmail.com
+	name = Andres Manz
+[push]
+	default = current
+[core]
+	editor = vim
+[credential]
+	helper = cache

@@ -1,0 +1,8 @@
+shopt -s extglob
+
+for i in ~/.sources/*.source; do source $i; done
+
+# pkgfile hook
+source /usr/share/doc/pkgfile/command-not-found.bash
+
+# vim:ft=sh
