@@ -7,8 +7,7 @@ Xft.hinting:                true
 Xft.hintstyle:              hintslight
 
 URxvt.fading:               15
-!Set URxvt.depth: 32  for transparent background, 0 for nothing - URxvt.background: [85]#2d2d2d  -  Not used - using transset and devilspie for URxvt transparency to work with ranger and w3m image preview
-!URxvt.depth:                32
+URxvt.depth:                32
 URxvt.geometry:             90x30
 URxvt.urgentOnBell:         true
 URxvt.visualBell:           true
@@ -25,7 +24,7 @@ URxvt*borderLess:           false
 
 ! Fonts
 URxvt.allow_bold:           false
-URxvt*font:             xft:Roboto Mono-8
+URxvt*font:                 xft:Roboto Mono-10
 
 !Clipboard
 URxvt.keysym.Shift-Control-C: perl:clipboard:copy
@@ -59,7 +58,7 @@ URxvt.tabbed.no-tabbedex-keys: true
 
 ! special
 *foreground:   #c5c8c6
-*background:   #1d1f21
+*background:   [85]#1d1f21
 *cursorColor:  #c5c8c6
 
 ! black
