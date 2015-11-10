@@ -1,0 +1,13 @@
+#!/bin/bash
+if [ $# -eq 0 ]; then
+    echo "filename must me specified" >&2
+    exit 1
+elif [ -f "$1" ]; then
+    echo "file already exists" >&2
+    exit 1
+fi
+
+echo -e "#!/bin/bash\n" > $1
+chmod +x $1
+"${EDITOR:-${VISUAL:-vim}}" $1
+
