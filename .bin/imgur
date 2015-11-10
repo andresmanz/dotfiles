@@ -1,0 +1,32 @@
+#!/bin/bash
+client_id="0abab015a71b400"
+upload_url="https://api.imgur.com/3/image.xml"
+
+which curl >/dev/null 2>/dev/null || {
+    echo "couln't find curl" >&2
+    exit 17
+}
+
+if [ $# -eq 0 ]; then
+    echo "no file specified"
+    exit 16
+elif [ ! -f "$1" ]; then
+    echo "file not found: $1" >&2
+    exit 1
+fi
+
+response=$(curl -H "Authorization: Client-ID $client_id" \
+           -F "image=@$1" \
+           $upload_url 2>/dev/null)
+
+is_success=$(echo $response | sed -n -e 's/.*<data.*success=\"\(.\)\".*<\/data>.*/\1/p')
+
+if [ $is_success = 1 ]; then
+    upload_link=$(echo $response | sed -n -e 's/.*<link>\(.*\)<\/link>.*/\1/p')
+    echo "link: $upload_link"
+else
+    error_message=$(echo $response | sed -n -e 's/.*<error>\(.*\)<\/error>.*/\1/p')
+    echo "error: $error_message"
+    exit 1
+fi
+
