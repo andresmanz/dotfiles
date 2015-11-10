@@ -8,7 +8,7 @@ which curl >/dev/null 2>/dev/null || {
 }
 
 if [ $# -eq 0 ]; then
-    echo "no file specified"
+    echo "no file specified" >&2
     exit 16
 elif [ ! -f "$1" ]; then
     echo "file not found: $1" >&2
@@ -23,10 +23,10 @@ is_success=$(echo $response | sed -n -e 's/.*<data.*success=\"\(.\)\".*<\/data>.
 
 if [ $is_success = 1 ]; then
     upload_link=$(echo $response | sed -n -e 's/.*<link>\(.*\)<\/link>.*/\1/p')
-    echo "link: $upload_link"
+    echo $upload_link
 else
     error_message=$(echo $response | sed -n -e 's/.*<error>\(.*\)<\/error>.*/\1/p')
-    echo "error: $error_message"
+    echo "error: $error_message" >&2
     exit 1
 fi
 
