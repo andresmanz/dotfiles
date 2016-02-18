@@ -6,6 +6,6 @@
 [push]
 	default = current
 [core]
-	editor = vim
+	editor = nvim
 [credential]
 	helper = cache
