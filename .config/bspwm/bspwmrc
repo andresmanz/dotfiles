@@ -1,0 +1,19 @@
+#! /bin/sh
+
+bspc config border_width        4
+bspc config window_gap          8
+#bspc config top_padding         24
+
+bspc config split_ratio         0.52
+bspc config borderless_monocle  true
+bspc config gapless_monocle     true
+bspc config focus_by_distance   true
+
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+bspc rule -a Screenkey manage=off
+
+compton --config ~/.config/bspwm/compton.conf &
+feh --bg-scale ~/.config/bspwm/wallpaper.jpg &
+#~/.config/lemonbar/mylemonbar &
+
