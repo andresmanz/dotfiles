@@ -1,30 +1,29 @@
+Xft.dpi:                    96
+Xft.autohint:               false
+Xft.hinting:                false
+Xft.hintstyle:              hintslight
+Xft.lcdfilter:              lcddefault
+Xft.rgba:                   rgba
+
 Xcursor*theme:              Oxygen_White
 
-Xft.dpi:                    96
-Xft.antialias:              true
-Xft.rgba:                   rgb
-Xft.hinting:                true
-Xft.hintstyle:              hintslight
-
 URxvt.fading:               15
-URxvt.depth:                32
+URxvt.depth:                24
 URxvt.geometry:             90x30
 URxvt.urgentOnBell:         true
 URxvt.visualBell:           true
 URxvt.loginShell:           true
-URxvt.saveLines:            65535
-URxvt.internalBorder:       1
-!URxvt.borderColor:      #b72f62
+URxvt.saveLines:            4096
+URxvt.internalBorder:       10
 URxvt.lineSpace:            0
-urxvt*shading:              95
-urxvt*transparent:          false
+URxvt.transparent:          false
 URxvt.iso14755:             false
-URxvt*letterSpace:          -1
-URxvt*borderLess:           false
+URxvt.letterSpace:          -2
+URxvt.borderLess:           false
 
 ! Fonts
 URxvt.allow_bold:           false
-URxvt*font:                 xft:Roboto Mono-10
+URxvt.font:                 xft:Sauce Code Powerline:pixelsize=16:antialias=false
 
 !Clipboard
 URxvt.keysym.Shift-Control-C: perl:clipboard:copy
@@ -37,58 +36,56 @@ URxvt*scrollTtyOutput:      false
 URxvt*scrollBar_right:      true
 
 ! Perl extensions
-URxvt.perl-ext-common:      default,tabbedex,matcher,clipboard
-URxvt.url-launcher: /usr/bin/firefox
-URxvt.matcher.button: 1
+URxvt.perl-ext-common:      default,matcher,clipboard
+URxvt.url-launcher:         /usr/bin/chromium
+URxvt.matcher.button:       1
 
 ! Tabs
 URxvt.tabbed.autohide:      true
 URxvt.tabbed.reopen-on-close: no
-URxvt.keysym.Control-t: perl:tabbedex:new_tab
-URxvt.keysym.Control-Tab: perl:tabbedex:next_tab
+URxvt.keysym.Control-t:     perl:tabbedex:new_tab
+URxvt.keysym.Control-Tab:   perl:tabbedex:next_tab
 URxvt.keysym.Control-Shift-Tab: perl:tabbedex:prev_tab
 URxvt.tabbed.no-tabbedex-keys: true
 
-! Cursor
-*.cursorBlink:          true
-*.cursorUnderline:      false
-
-! Pointer
-*.pointerBlank:         true
+! cursor
+*.cursorBlink:              true
+*.cursorUnderline:          false
+*.pointerBlank:             true
 
 ! special
-*foreground:   #c5c8c6
-*background:   [85]#1d1f21
-*cursorColor:  #c5c8c6
+*.foreground:   #f2f3f2
+*.background:   #1a1a20
+*.cursorColor:  #f2f3f2
 
 ! black
-*color0:       #282a2e
-*color8:       #373b41
+*.color0:       #363740
+*.color8:       #75747a
 
 ! red
-*color1:       #a54242
-*color9:       #cc6666
+*.color1:       #BF687F
+*.color9:       #BF687F
 
 ! green
-*color2:       #8c9440
-*color10:      #b5bd68
+*.color2:       #9BB38F
+*.color10:      #9BB38F
 
 ! yellow
-*color3:       #de935f
-*color11:      #f0c674
+*.color3:       #e5c196
+*.color11:      #e5c196
 
 ! blue
-*color4:       #5f819d
-*color12:      #81a2be
+*.color4:       #8294b4
+*.color12:      #8294b4
 
-!magenta
-*color5:       #85678f
-*color13:      #b294bb
+! magenta
+*.color5:       #E68A8B
+*.color13:      #E68A8B
 
 ! cyan
-*color6:       #5e8d87
-*color14:      #8abeb7
+*.color6:       #95B9BF
+*.color14:      #95B9BF
 
 ! white
-*color7:       #707880
-*color15:      #c5c8c6
+*.color7:       #f2f3f2
+*.color15:      #f2f3f2
