@@ -1,5 +1,10 @@
 alias ls="ls -h --color=auto"
 alias l='ls -l'
 alias la='ls -la'
-alias svim="sudo vim"
+alias sys="sudo systemctl"
+alias vim="nvim"
+alias svim="sudo nvim"
+alias smount="sudo mount"
+alias yi="yaourt --noconfirm"
+alias pacs="sudo pacman -Syu"
 

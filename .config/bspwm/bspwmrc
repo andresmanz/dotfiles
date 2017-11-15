@@ -12,6 +12,7 @@ bspc config focus_by_distance   true
 bspc monitor -d I II III IV V VI VII VIII IX X
 
 bspc rule -a Screenkey manage=off
+bspc rule -a Chromium desktop=^2
 
 compton --config ~/.config/bspwm/compton.conf &
 feh --bg-scale ~/.config/bspwm/wallpaper.jpg &
